@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+  <%= image_tag @pirate.beard_photo.url(:big) %>
+</div>
+
+<%= link_to 'Edit', edit_pirate_path(@pirate) %> |
+<%= link_to 'Back', pirates_path %>

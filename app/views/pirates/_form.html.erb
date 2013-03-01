@@ -1,0 +1,22 @@
+<%= form_for(@pirate) do |f| %>
+  <% if @pirate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pirate.errors.count, "error") %> prohibited this pirate from being saved:</h2>
+
+      <ul>
+      <% @pirate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div>
+    <%= f.label :beard_photo, "Upload your beard photo" %><br>
+    <%= f.file_field :beard_photo %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

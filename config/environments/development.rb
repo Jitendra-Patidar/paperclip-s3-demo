@@ -34,4 +34,13 @@ PaperclipS3Demo::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => "AWS-DEVELOPMENT-BUCKET",
+      :access_key_id => "AWS-KEY-ID",
+      :secret_access_key => "AWS-ACCESS-KEY"
+    }
+  }
 end

@@ -1,4 +1,8 @@
 PaperclipS3Demo::Application.routes.draw do
+  resources :pirates
+  root to: "pirates#index"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
